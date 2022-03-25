@@ -1,0 +1,312 @@
+/* var */
+:root {
+  --b1-Color: hsl(171, 66%, 44%);
+  --b2-Color: hsl(233, 100%, 69%);
+  --footer-Color: #9fabb224;
+  --word-Color: #777;
+  --pramiry-padding: 60px;
+}
+/* var */
+/* Global Ruls */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* Global Ruls */
+/* components */
+.specail {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 50px;
+}
+.specail + p {
+  width: 50%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  line-height: 1.8;
+  text-align: center;
+  padding-bottom: 50px;
+  transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  -o-transform: translate(-50%, 0%);
+}
+@media (max-width: 992px) {
+  .specail + p {
+    width: 100%;
+  }
+}
+.button input:first-child {
+  width: 200px;
+  height: 50px;
+  border: none;
+  margin-right: 5px;
+  background-color: var(--b1-Color);
+  font-weight: bold;
+  color: white;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.button input:last-child {
+  width: 200px;
+  height: 50px;
+  border: none;
+  margin-left: 5px;
+  background-color: var(--b2-Color);
+  font-weight: bold;
+  color: white;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.button input:first-child:active {
+  background-color: #26baa49e;
+}
+.button input:last-child:active {
+  background-color: hsl(233deg 100% 69% / 75%);
+}
+@media (max-width: 767px) {
+  .button input:first-child,
+  .button input:last-child {
+    margin-bottom: 25px;
+    margin-left: 0;
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+  }
+}
+/* components */
+/* header */
+header {
+  padding: 20px;
+  background-image: url(../images/bg-header-desktop.png);
+  background-size: cover;
+}
+@media (max-width: 991px) {
+  header {
+    background-image: url(../images/bg-header-mobile.png);
+    background-size: cover;
+  }
+}
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo {
+  width: 50px;
+  height: 50px;
+}
+/* header */
+/* landing */
+.landing {
+  padding-top: var(--pramiry-padding);
+  padding-bottom: var(--pramiry-padding);
+}
+.landing .intro,
+.downloader .button {
+  text-align: center;
+}
+.landing .intro .text h1 {
+  font-size: 40px;
+}
+.landing .intro .text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--word-Color);
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  -o-transform: translate(-50%, 0%);
+}
+.landing .intro .button {
+  margin-top: 50px;
+}
+@media (max-width: 767px) {
+  .landing .intro .text h1,
+  .landing .intro .text p {
+    font-size: revert;
+  }
+}
+/* landing */
+/* featuers */
+.featuers {
+  /* padding-top: var(--pramiry-padding); */
+  padding-bottom: var(--pramiry-padding);
+}
+.featuers .feat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.featuers .feat .computer {
+  position: relative;
+  left: -60px;
+}
+.featuers .feat h3 {
+  font-size: 25px;
+}
+.featuers .feat p {
+  line-height: 1.8;
+  color: var(--word-Color);
+}
+@media (max-width: 991px) {
+  .featuers .feat {
+    flex-flow: column;
+    text-align: center;
+  }
+  .featuers .feat img {
+    max-width: 100%;
+  }
+  .featuers .feat .computer {
+    left: 0;
+  }
+}
+.featuers .g-feat {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+.featuers .g-feat .ff p {
+  line-height: 1.8;
+  color: var(--word-Color);
+}
+.featuers .g-feat i {
+  font-size: 40px;
+}
+.partener {
+  padding-top: var(--pramiry-padding);
+  padding-bottom: var(--pramiry-padding);
+}
+.partener .p-logo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+}
+.partener .p-logo img {
+  margin: auto;
+  margin-bottom: 20px;
+}
+.downloader {
+  padding-top: var(--pramiry-padding);
+  padding-bottom: var(--pramiry-padding);
+}
+/* featuers */
+/* footer */
+footer {
+  background-color: var(--footer-Color);
+  padding: 2rem 1rem;
+}
+.footer {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  gap: 20px;
+  grid-template-areas: "logo col-1 col-2 col-3 col4";
+  justify-content: center;
+  align-items: center;
+}
+.footer ul {
+  list-style-type: none;
+}
+footer ul li {
+  margin-bottom: 1em;
+}
+footer ul a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+footer ul a:hover {
+  color: var(--b1-Color);
+}
+.footer .logo {
+  grid-area: logo;
+}
+.footer .logo img {
+  width: 4em;
+}
+.footer .col-1 {
+  grid-area: col-1;
+}
+.footer .col-2 {
+  grid-area: col-2;
+}
+.footer .col-3 {
+  grid-area: col-3;
+}
+.footer .col-4 ul {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+.footer .col-4 ul li {
+  margin-left: 1em;
+}
+@media (max-width: 991px) {
+  .footer {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    margin: 0 1.5em 0 -1em;
+  }
+  .footer .logo {
+    margin: 0 1em 0 3.5em;
+  }
+  .footer ul li {
+    font-size: 20px;
+  }
+  .footer .col-4 ul {
+    margin-left: -5em;
+  }
+  .footer .col-4 ul li {
+    margin-left: 3.5em;
+  }
+}
+/* footer */
